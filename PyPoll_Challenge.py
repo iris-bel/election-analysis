@@ -12,7 +12,7 @@ import os
 file_to_load = os.path.join("Resources", "election_results.csv")
 
 # Assign a variable to save the file to a path
-file_to_save = os.path.join("analysis", "election_analysis.txt")
+file_to_save = os.path.join("analysis", "election_results.txt")
 
 # Initialize a total vote counter
 total_votes = 0
@@ -96,7 +96,6 @@ with open(file_to_save, "w") as txt_file:
     for candidate_name in candidate_votes:
         votes = candidate_votes[candidate_name]
         votes_percentage = float(votes)/float(total_votes) * 100
-        #print(f"{candidate_name}: {votes_percentage:.1f}% ({votes:,})\n")
         candidate_results = (f"{candidate_name}: {votes_percentage:.1f}% ({votes:,})\n")
         # Print each candidate, their voter count, and percentage to the terminal
         print(candidate_results)
@@ -128,10 +127,3 @@ with open(file_to_save, "w") as txt_file:
 
 # Print the total votes
 #print(total_votes)
-
-# Using the open() function with the "w" mode we will write data to the file
-#with open(file_to_save, "w") as txt_file:
-# Write some data to the file
-    #txt_file.write("Counties in the Election\n-------------------------\nArapahoe\nDenver\nJefferson")
-
-
