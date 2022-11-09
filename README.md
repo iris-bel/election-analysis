@@ -35,3 +35,10 @@ The analysis of the election reveals that:
 * The winner of the election was Diana DeGette
 
 ## Election Audit Summary
+In its current form, this script can be used for any election involving multiple counties/geographical regions and/or multiple candidates as long as the data .csv file is formatted the way the original file is formatted. This script can currently handle processing election results for an election with more counties and more candidates than the example that we have here.
+
+Currently, our code determines the winner of the election based on a simple majority of votes. This calculation can be tailored to the requirements of the voting system in question. For instance, if the election we plan to analyze requires that a candidate must receive over 50% of the vote in order to win, we can add a line of code to check whether the winning_count variable is greater than 50% of the total_votes before confirming the winning_candidate.
+
+In addition to changing the conditions that lead to a winning candidate, the script can be expanded to handle the analysis of multiple election decisions, as local elections often involve voting on multiple goverment positions and proposals. The script can be expanded to perform the same analysis that it currently performs on the candidate column on additional columns containing voting data on other candidates and propositions. 
+
+Ultimately, the modifications that can be made on this script are endless and depend primarily on the specifications of the specific election and the electoral rules of the region.
